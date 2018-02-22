@@ -1,4 +1,4 @@
-Question 1)\
+oQuestion 1)\
 		Get the total orders for each movie in 'Pune' 
 
 Answer 1)
@@ -7,7 +7,7 @@ Answer 1)
 question 2)
 		Find the unique discount vouchers used during booking along with total number of orders 
 Asn 2)
-		Select coupen, Sum(Number_of_tickets) from booking_order GROUP BY coupen
+		Select coupon, Sum(Number_of_tickets) from booking_order GROUP BY coupon
 
 Question 4)
 		Get the total ticket amount for each movie theater ie. cinepolis, e-square, carnival and miraj. 
