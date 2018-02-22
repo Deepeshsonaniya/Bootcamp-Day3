@@ -1,0 +1,21 @@
+Question 1)\
+		Get the total orders for each movie in 'Pune' 
+
+Answer 1)
+		select * from booking_order where id IN (select id from event_app_venue where city='pune')
+
+question 2)
+		Find the unique discount vouchers used during booking along with total number of orders 
+Asn 2)
+		Select coupen, Sum(Number_of_tickets) from booking_order GROUP BY coupen
+
+Question 4)
+		Get the total ticket amount for each movie theater ie. cinepolis, e-square, carnival and miraj. 
+		
+Ans4)
+		select total_payment from booking_order where id IN (select ID from theatres_theatre where title LIKE 'E-square%' OR 'Cinepolis%' OR 'CARNIVAL%' OR 'Miraj%') GROUP BY theatre_id
+
+Que 5)
+		Get all the bookings not done from web browser. 
+Ans 5)
+		select * from booking_order where device_type NOT LIKE '%WEB%'
