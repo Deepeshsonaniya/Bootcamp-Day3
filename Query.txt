@@ -13,7 +13,7 @@ Question 4)
 		Get the total ticket amount for each movie theater ie. cinepolis, e-square, carnival and miraj. 
 		
 Ans4)
-		select total_payment from booking_order where id IN (select ID from theatres_theatre where title LIKE 'E-square%' OR 'Cinepolis%' OR 'CARNIVAL%' OR 'Miraj%') GROUP BY theatre_id
+		select Sum(total_payment) from booking_order where id IN (select ID from theatres_theatre where title LIKE 'E-square%' OR 'Cinepolis%' OR 'CARNIVAL%' OR 'Miraj%') GROUP BY theatre_id
 
 Que 5)
 		Get all the bookings not done from web browser. 
